@@ -26,7 +26,7 @@ RSpec.describe QuestionsController, type: :controller do
     end
 
     it 'assigns the requested question to @question ' do
-      expext( assigns(:question) ).to eq question
+      expect( assigns(:question) ).to eq question
     end
 
     it 'renders show view' do
