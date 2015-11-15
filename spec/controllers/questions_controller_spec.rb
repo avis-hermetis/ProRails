@@ -42,7 +42,52 @@ RSpec.describe QuestionsController, type: :controller do
     end
 
     it 'renders new view' do
-      expect(response). to render_template :new
+      expect(response).to render_template :new
+    end
+  end
+
+  describe 'Post #create' do
+
+    context 'with valid attributes do' do
+
+      it 'saves the new question in the database' do
+        expect{ post :create, question: attributes_for(:question) }.to change(Question, :count).by(1)
+      end
+
+      it 'redirects to show view' do
+        post :create, question: attributes_for(:question)
+        expect(response).to redirect_to question_path(asigns(:question))
+      end
+
+    end
+
+    context 'with invalid attributes' do
+
+      it 'does not save the question to database' do
+        expect{ post :create, question: attributes_for(:invalid_question) }.to_not change(Question, :count)
+      end
+
+      it 'renders new view' do
+        post :create, question: attributes_for(:question)
+        expect(response).to render_template :new
+      end
+
+    end
+  end
+
+  describe 'Delete #destoy' do
+    before do
+      get :delete, id: question
+    end
+
+    it 'destroys the requested question from the database' do
+    question
+    expect{ delete :destroy, id: question }.to change(Question, :count).by(-1)
+    end
+
+    it 'renders index view' do
+      delete :destroy, id: question
+      expect(response).to redirect_to questions_path
     end
   end
 
