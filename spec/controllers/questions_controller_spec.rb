@@ -56,7 +56,7 @@ RSpec.describe QuestionsController, type: :controller do
 
       it 'redirects to show view' do
         post :create, question: attributes_for(:question)
-        expect(response).to redirect_to question_path(asigns(:question))
+        expect(response).to redirect_to question_path(assigns(:question))
       end
 
     end
@@ -67,20 +67,18 @@ RSpec.describe QuestionsController, type: :controller do
         expect{ post :create, question: attributes_for(:invalid_question) }.to_not change(Question, :count)
       end
 
-      it 'renders new view' do
-        post :create, question: attributes_for(:question)
+      it 're-renders new view' do
+        post :create, question: attributes_for(:invalid_question)
         expect(response).to render_template :new
       end
 
     end
   end
 
-  describe 'Delete #destoy' do
-    before do
-      get :delete, id: question
-    end
+  describe 'Delete #destroy' do
+    let(:question) { create (:question) }
 
-    it 'destroys the requested question from the database' do
+    it 'deletes the requested question from the database' do
     question
     expect{ delete :destroy, id: question }.to change(Question, :count).by(-1)
     end
