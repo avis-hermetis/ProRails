@@ -1,9 +1,8 @@
 class AnswersController < ApplicationController
-  before_action :set_question_from_question_id, only:[:new, :create]
+  before_action :set_question, only:[:new, :create]
 
 
   def new
-    @question = Question.find(params[:question_id])
     @answer = @question.answers.new
   end
 
@@ -19,7 +18,7 @@ class AnswersController < ApplicationController
 
   private
 
-  def set_question_from_question_id
+  def set_question
     @question = Question.find(params[:question_id])
   end
 
