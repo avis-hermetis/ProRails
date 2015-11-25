@@ -35,6 +35,12 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   describe 'Get #new' do
+    before do
+      @user = create(:user)
+      @request.env['devise.mapping'] = Devise.mappings[:user]
+      sign_in @user
+    end
+
     before {get :new}
 
     it 'assigns a new Question to @question' do
@@ -47,6 +53,11 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   describe 'Post #create' do
+    before do
+      @user = create(:user)
+      @request.env['devise.mapping'] = Devise.mappings[:user]
+      sign_in @user
+    end
 
     context 'with valid attributes do' do
 
@@ -76,6 +87,11 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   describe 'Delete #destroy' do
+    before do
+      @user = create(:user)
+      @request.env['devise.mapping'] = Devise.mappings[:user]
+      sign_in @user
+    end
     let(:question) { create (:question) }
 
     it 'deletes the requested question from the database' do
