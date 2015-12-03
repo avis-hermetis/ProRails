@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-
+    @answers = @question.answers
   end
 
   def new
@@ -15,6 +15,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    @question.user = current_user
 
     if @question.save
       redirect_to @question
@@ -24,8 +25,12 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    @question.destroy
-    redirect_to questions_path
+    if current_user && current_user == @question.user
+      @question.destroy
+      redirect_to questions_path
+    else
+      redirect_to @question, notice: 'You are not the author'
+    end
   end
 
   private
@@ -35,6 +40,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:title, :body)
+    question_params = params.require(:question).permit(:title, :body)
+    question_params.merge(user: current_user) if current_user
   end
 end

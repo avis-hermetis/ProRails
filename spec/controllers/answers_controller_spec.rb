@@ -1,10 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe AnswersController, type: :controller do
+  let(:user) { create(:user) }
   let(:question) { create(:question) }
 
   describe 'GET #new' do
    before  do
+     sign_in user
      get :new, question_id: question
    end
 
@@ -22,6 +24,9 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'POST #create' do
+    before  do
+      sign_in user
+    end
 
     context 'with valid attributes do' do
 
@@ -50,4 +55,39 @@ RSpec.describe AnswersController, type: :controller do
     end
   end
 
+  describe 'DELETE #destroy' do
+    let(:answer) { create (:answer) }
+
+    context 'As an author' do
+      before { sign_in answer.user }
+
+      it 'deletes the requested answer from the database' do
+        answer
+        expect{ delete :destroy, id: answer }.to change(Answer, :count).by(-1)
+      end
+
+      it 'redirect_to question show view' do
+        question = answer.question
+        delete :destroy, id: answer
+        expect(response).to redirect_to question
+      end
+
+    end
+
+    context 'As not an author' do
+      let(:non_author) { create (:user) }
+      before { sign_in non_author }
+
+      it 'not deletes the requested answer from the database' do
+        answer
+        expect{ delete :destroy, id: answer }.to_not change(Answer, :count)
+      end
+
+      it 'render question path' do
+        delete :destroy, id: answer
+        expect(response).to redirect_to answer.question
+      end
+
+    end
+  end
 end

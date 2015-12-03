@@ -1,0 +1,40 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: rgba(82, 82, 82, 0.96);
+  color: #eee;
+  text-decoration: underline;
+}
+
+.navbar-inverse .navbar-nav > li > span {
+  position: relative;
+  display: block;
+  padding: 15px 2px;
+  color: #9d9d9d;
+}
+.alert {
+  padding-top: 12px;
+}
+.border {
+  border: 1px solid black;
+}

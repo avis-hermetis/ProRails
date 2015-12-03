@@ -1,1 +1,6 @@
-p= link_to 'Ask question', new_question_path
+p= link_to 'Ask question', new_question_path, class: "btn btn-success"
+hr
+- @questions.each do |question|
+  div
+    = link_to question.title, question_path(question)
+  hr
