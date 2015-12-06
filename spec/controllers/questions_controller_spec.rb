@@ -47,11 +47,11 @@ RSpec.describe QuestionsController, type: :controller do
     context 'with valid attributes do' do
 
       it 'saves the new question in the database' do
-        expect{ post :create, question: attributes_for(:question) }.to change(Question, :count).by(1)
+        expect{ post :create, user_id: @user, question: attributes_for(:question) }.to change(Question, :count).by(1)
       end
 
       it 'redirects to show view' do
-        post :create, question: attributes_for(:question)
+        post :create, user_id: @user, question: attributes_for(:question)
         expect(response).to redirect_to question_path(assigns(:question))
       end
 
@@ -60,11 +60,11 @@ RSpec.describe QuestionsController, type: :controller do
     context 'with invalid attributes' do
 
       it 'does not save the question to database' do
-        expect{ post :create, question: attributes_for(:invalid_question) }.to_not change(Question, :count)
+        expect{ post :create, user_id: @user, question: attributes_for(:invalid_question) }.to_not change(Question, :count)
       end
 
       it 're-renders new view' do
-        post :create, question: attributes_for(:invalid_question)
+        post :create, user_id: @user, question: attributes_for(:invalid_question)
         expect(response).to render_template :new
       end
 
@@ -72,13 +72,12 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
-    let(:question) { create (:question) }
+    let!(:question) { create (:question) }
 
     context 'As an author' do
       before { sign_in question.user }
 
       it 'deletes the requested question from the database' do
-        question
         expect{ delete :destroy, id: question }.to change(Question, :count).by(-1)
       end
 
@@ -94,7 +93,6 @@ RSpec.describe QuestionsController, type: :controller do
       before { sign_in non_author }
 
       it 'not deletes the requested question from the database' do
-        question
         expect{ delete :destroy, id: question }.to_not change(Question, :count)
       end
 

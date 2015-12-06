@@ -31,11 +31,11 @@ RSpec.describe AnswersController, type: :controller do
     context 'with valid attributes do' do
 
       it 'saves the new answer to the database' do
-        expect{ post :create, question_id: question, answer: attributes_for(:answer) }.to change(question.answers, :count).by(1)
+        expect{ post :create, user_id: user, question_id: question, answer: attributes_for(:answer) }.to change(question.answers, :count).by(1)
       end
 
       it 'redirects to show view' do
-        post :create, question_id: question, answer: attributes_for(:answer)
+        post :create, user_id: user, question_id: question, answer: attributes_for(:answer)
         expect(response).to redirect_to question
       end
 
@@ -44,11 +44,11 @@ RSpec.describe AnswersController, type: :controller do
     context 'with invalid attributes' do
 
       it 'does not save the question to the database' do
-        expect{ post :create, question_id: question, answer: attributes_for(:invalid_answer) }.to_not change(Answer, :count)
+        expect{ post :create, user_id: user, question_id: question, answer: attributes_for(:invalid_answer) }.to_not change(Answer, :count)
       end
 
       it 're-renders new view' do
-        post :create, question_id: question, answer: attributes_for(:invalid_question)
+        post :create, user_id: user, question_id: question, answer: attributes_for(:invalid_question)
         expect(response).to render_template :new
       end
 
@@ -56,13 +56,12 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
-    let(:answer) { create (:answer) }
+    let!(:answer) { create (:answer) }
 
     context 'As an author' do
       before { sign_in answer.user }
 
       it 'deletes the requested answer from the database' do
-        answer
         expect{ delete :destroy, id: answer }.to change(Answer, :count).by(-1)
       end
 
@@ -79,7 +78,6 @@ RSpec.describe AnswersController, type: :controller do
       before { sign_in non_author }
 
       it 'not deletes the requested answer from the database' do
-        answer
         expect{ delete :destroy, id: answer }.to_not change(Answer, :count)
       end
 

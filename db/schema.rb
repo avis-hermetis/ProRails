@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20151130050154) do
     t.integer  "user_id"
   end
 
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
+
   create_table "questions", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
@@ -31,6 +33,8 @@ ActiveRecord::Schema.define(version: 20151130050154) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
   end
+
+  add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                          null: false
@@ -50,4 +54,6 @@ ActiveRecord::Schema.define(version: 20151130050154) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "answers", "users"
+  add_foreign_key "questions", "users"
 end

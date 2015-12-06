@@ -20,10 +20,16 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer = Answer.find(params[:id])
-    @question = @answer.question_id
-    @answer.destroy if @answer.user == current_user
+    if current_user && current_user.author_of(@answer)
+      @answer.destroy
+      @notice = "Answer succesfully deleted!"
+    else
+      @notice = "You are not author"
+    end
 
-    redirect_to question_path(@question), notice: 'The answer was successfully deleted'
+    redirect_to @answer.question, notice: @notice
+
+
   end
 
   private
@@ -33,7 +39,7 @@ class AnswersController < ApplicationController
   end
 
   def answer_params
-    @answer_params = params.require(:answer).permit(:body)
-    @answer_params.merge(user: current_user) if current_user
+   params.require(:answer).permit(:body)
   end
+
 end

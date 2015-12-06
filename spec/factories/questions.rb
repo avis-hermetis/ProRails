@@ -1,8 +1,14 @@
 FactoryGirl.define do
+  sequence :qtitle  do |n|
+    "MyString#{n}"
+  end
+  sequence :qbody  do |n|
+    "MyText#{n}"
+  end
 
   factory :question do
-    title "MyString"
-    body "MyText"
+    title :qtitle
+    body :qbody
     user
   end
 
