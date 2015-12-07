@@ -24,14 +24,22 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'POST #create' do
+    let!(:answer) { create(:answer, user: user) }
+
     before  do
       sign_in user
     end
+
 
     context 'with valid attributes do' do
 
       it 'saves the new answer to the database' do
         expect{ post :create, user_id: user, question_id: question, answer: attributes_for(:answer) }.to change(question.answers, :count).by(1)
+      end
+
+      it 'connects the answer with the current user' do
+        post :create, user_id: user, question_id: question, answer: attributes_for(:answer)
+        expect(answer.user.id).to eq user.id
       end
 
       it 'redirects to show view' do
