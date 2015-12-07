@@ -43,7 +43,8 @@ RSpec.describe QuestionsController, type: :controller do
 
   describe 'POST #create' do
     sign_in_user
-    let!(:question){create(:question, user: @user)}
+    let(:question){build(:question)}
+
 
     context 'with valid attributes do' do
 
@@ -52,8 +53,8 @@ RSpec.describe QuestionsController, type: :controller do
       end
 
       it 'connects the question with the current user' do
-        post :create, user_id: @user, question: attributes_for(:question)
-        expect(question.user.id).to eq @user.id
+        post :create, question: attributes_for(:question)
+        expect(assigns(:question).user.id).to eq controller.current_user.id
       end
 
       it 'redirects to show view' do

@@ -24,7 +24,7 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'POST #create' do
-    let!(:answer) { create(:answer, user: user) }
+    let(:answer) { build(:answer) }
 
     before  do
       sign_in user
@@ -38,8 +38,8 @@ RSpec.describe AnswersController, type: :controller do
       end
 
       it 'connects the answer with the current user' do
-        post :create, user_id: user, question_id: question, answer: attributes_for(:answer)
-        expect(answer.user.id).to eq user.id
+        post :create, question_id: question, answer: attributes_for(:answer)
+        expect(assigns(:answer).user.id).to eq controller.current_user.id
       end
 
       it 'redirects to show view' do
