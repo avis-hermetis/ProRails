@@ -8,10 +8,10 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
+log/*
 !/log/.keep
-/tmp
-
+tmp/*
 config/database.yml
-
 .idea
+public/uploads
+public/system

@@ -2,12 +2,9 @@ require 'rails_helper'
 
 RSpec.describe QuestionsController, type: :controller do
 
-  describe  'Get #index' do
+  describe  'GET #index' do
     let(:questions) { create_list(:question, 2) }
-
-    before do
-    get :index
-    end
+    before { get :index }
 
     it 'populates an array of all questions' do
       expect( assigns(:questions) ).to match_array(questions)
@@ -18,12 +15,9 @@ RSpec.describe QuestionsController, type: :controller do
     end
   end
 
-  describe 'Get #show' do
+  describe 'GET #show' do
     let(:question) { create (:question) }
-
-    before do
-    get :show, id: question
-    end
+    before { get :show, id: question }
 
     it 'assigns the requested question to @question ' do
       expect( assigns(:question) ).to eq question
@@ -34,8 +28,9 @@ RSpec.describe QuestionsController, type: :controller do
     end
   end
 
-  describe 'Get #new' do
-    before {get :new}
+  describe 'GET #new' do
+    sign_in_user
+    before { get :new }
 
     it 'assigns a new Question to @question' do
       expect(assigns(:question)).to be_a_new(Question)
@@ -46,12 +41,20 @@ RSpec.describe QuestionsController, type: :controller do
     end
   end
 
-  describe 'Post #create' do
+  describe 'POST #create' do
+    sign_in_user
+    let(:question){build(:question)}
+
 
     context 'with valid attributes do' do
 
       it 'saves the new question in the database' do
         expect{ post :create, question: attributes_for(:question) }.to change(Question, :count).by(1)
+      end
+
+      it 'connects the question with the current user' do
+        post :create, question: attributes_for(:question)
+        expect(assigns(:question).user.id).to eq controller.current_user.id
       end
 
       it 'redirects to show view' do
@@ -75,19 +78,37 @@ RSpec.describe QuestionsController, type: :controller do
     end
   end
 
-  describe 'Delete #destroy' do
-    let(:question) { create (:question) }
+  describe 'DELETE #destroy' do
+    let!(:question) { create (:question) }
 
-    it 'deletes the requested question from the database' do
-    question
-    expect{ delete :destroy, id: question }.to change(Question, :count).by(-1)
+    context 'As an author' do
+      before { sign_in question.user }
+
+      it 'deletes the requested question from the database' do
+        expect{ delete :destroy, id: question }.to change(Question, :count).by(-1)
+      end
+
+      it 'redirect_to index view' do
+        delete :destroy, id: question
+        expect(response).to redirect_to questions_path
+      end
+
     end
 
-    it 'renders index view' do
-      delete :destroy, id: question
-      expect(response).to redirect_to questions_path
+    context 'As not an author' do
+      let(:non_author) { create (:user) }
+      before { sign_in non_author }
+
+      it 'not deletes the requested question from the database' do
+        expect{ delete :destroy, id: question }.to_not change(Question, :count)
+      end
+
+      it 'render question path' do
+        delete :destroy, id: question
+        expect(response).to redirect_to question
+      end
+
     end
   end
-
 end
 

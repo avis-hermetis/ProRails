@@ -1,0 +1,169 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-09 23:22:33 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (48.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (112.1ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.slim within layouts/application (303.6ms)
+  Rendered layouts/_header.html.slim (25.5ms)
+Completed 200 OK in 4733ms (Views: 4443.8ms | ActiveRecord: 230.1ms)
+
+
+Started GET "/assets/answers.self-407131e0b2810f2bb76ff30f8b5995c6464b167a825de05cb201235a23038463.css?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/custom.self-8f1c30f9a0a6129786da17feba72c0ba82d99591cce5f1a6c34f91d46b338ddb.css?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-09 23:22:39 +1000
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2015-12-09 23:22:53 +1000
+Processing by QuestionsController#new as HTML
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-09 23:22:53 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (64.4ms)
+  Rendered layouts/_header.html.slim (0.4ms)
+Completed 200 OK in 173ms (Views: 154.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2015-12-09 23:22:54 +1000
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-12-09 23:23:02 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GwNR9NOXGIoymHnI6L+gzbBWexJOY7pTeNh+TUI3Hjsa+aH2ptvSb2nJ7bwN5CBu2iiNsOluY47lv9JtMiy0ow==", "user"=>{"email"=>"probe@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (66.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "probe@test.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-12-03 09:58:57.743261"], ["current_sign_in_at", "2015-12-09 13:23:02.954489"], ["sign_in_count", 13], ["updated_at", "2015-12-09 13:23:02.956193"], ["id", 1]]
+  [1m[35m (18.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 461ms (ActiveRecord: 85.6ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2015-12-09 23:23:03 +1000
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/new.html.slim within layouts/application (24.9ms)
+  Rendered layouts/_header.html.slim (0.2ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2015-12-09 23:23:23 +1000
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cs/MLcUPlxY8o3kJG2hgDMEFV0T2Ca1KPaxryrVFygqxrhNu6cdTWIMvfR+l+jd0Mxmt3Ku24F73MJkmAP4szw==", "question"=>{"title"=>"Леха, че делать?", "body"=>"Скажи же мне!"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (105.2ms)[0m  INSERT INTO "questions" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Леха, че делать?"], ["body", "Скажи же мне!"], ["user_id", 1], ["created_at", "2015-12-09 13:23:23.297614"], ["updated_at", "2015-12-09 13:23:23.297614"]]
+  [1m[36m (41.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/9
+Completed 302 Found in 253ms (ActiveRecord: 148.1ms)
+
+
+Started GET "/questions/9" for 127.0.0.1 at 2015-12-09 23:23:23 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (70.3ms)[0m  [1mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (88.3ms)
+  Rendered layouts/_header.html.slim (0.2ms)
+Completed 200 OK in 259ms (Views: 134.0ms | ActiveRecord: 73.2ms)
+
+
+Started GET "/questions/9/answers/new" for 127.0.0.1 at 2015-12-09 23:23:34 +1000
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"9"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered answers/new.html.slim within layouts/application (7.3ms)
+  Rendered layouts/_header.html.slim (13.5ms)
+Completed 200 OK in 115ms (Views: 101.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/questions/9/answers" for 127.0.0.1 at 2015-12-09 23:23:48 +1000
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kiJ0yWuCCin8uOL7OV+nQDzCSlMkVIQfheiw2yE/GV0pQ6uKR0rOZ0M05u2HzfA4zt6wy3nryQtPdEI3lIT/mA==", "answer"=>{"body"=>"Да, я, Мишаня, сам хз."}, "commit"=>"Create", "question_id"=>"9"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (12.1ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Да, я, Мишаня, сам хз."], ["question_id", 9], ["user_id", 1], ["created_at", "2015-12-09 13:23:48.089511"], ["updated_at", "2015-12-09 13:23:48.089511"]]
+  [1m[35m (19.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/9
+Completed 302 Found in 50ms (ActiveRecord: 34.0ms)
+
+
+Started GET "/questions/9" for 127.0.0.1 at 2015-12-09 23:23:48 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (5.1ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 78ms (Views: 74.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-09 23:23:53 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (10.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.5ms)
+Completed 200 OK in 91ms (Views: 88.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/7" for 127.0.0.1 at 2015-12-09 23:23:57 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 7]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (16.6ms)
+  Rendered layouts/_header.html.slim (0.2ms)
+Completed 200 OK in 119ms (Views: 113.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/questions/9" for 127.0.0.1 at 2015-12-09 23:24:25 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (9.0ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 106ms (Views: 100.8ms | ActiveRecord: 2.3ms)

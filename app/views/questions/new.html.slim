@@ -1,0 +1,13 @@
+.row
+  = form_for @question do |f|
+    .col-md-1
+      = f.label :title
+    .col-md-11
+      = f.text_field :title
+    .clearfix style="margin-bottom: 5px;"
+    .col-md-1
+      = f.label :body
+    .col-md-11
+      = f.text_area :body
+    div
+      = f.submit 'Create', class: "btn btn-success"

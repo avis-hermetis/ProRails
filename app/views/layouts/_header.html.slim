@@ -1,0 +1,48 @@
+nav class="navbar navbar-inverse navbar-fixed-top"
+  div class="container"
+    div class="navbar-header"
+      button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
+        span class="sr-only" Navigation
+        span class="icon-bar"
+        span class="icon-bar"
+        span class="icon-bar"
+
+      a class="navbar-brand" href="/" Stack Overflow
+
+    div id="navbar" class="navbar-collapse collapse"
+      ul class="nav navbar-nav"
+        li.root: a<> href="#{questions_path}" Questions
+        //li: a<> href="#" Users
+
+
+      /form class="navbar-form navbar-left .search-cont" role="search"
+      /  .input-group
+      /    input.form-control.search-form aria-label="..." placeholder="find it..." type="text" /
+      /    .input-group-btn
+      /      button.btn.btn-default.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+      /        | Search in
+      /        span.caret<>
+      /      ul.dropdown-menu.dropdown-menu-right
+      /        li: a href="#" class="drp-search" all objects
+      /        - Search::INDEXES.each do |i|
+      /          li: a href="#" class="drp-search" id="drp-search-in_#{i}" = i
+
+
+      ul class="nav navbar-nav navbar-right"
+        -if current_user
+          li class="dropdown"
+            a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+              span class="glyphicon glyphicon-cog"
+              span<> Settings
+              span class="caret"
+            ul class="dropdown-menu dropdown-right" role="menu"
+              li: a href="#" Profile
+              li: a href="#" Change password
+          li
+            a href="#{destroy_user_session_path}" rel="nofollow" data-method="delete"
+              span class="glyphicon glyphicon-off"
+              span<> Sign out
+        -else
+          li = link_to 'Sign In', new_user_session_path
+          li: span or
+          li =link_to 'Sign Up',  new_user_registration_path
