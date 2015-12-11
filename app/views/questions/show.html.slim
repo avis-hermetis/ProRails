@@ -3,15 +3,19 @@ hr
 
 = @question.body
 hr
-h4 Answers (#{@answers.count}):
-hr
-- @answers.each do |answer|
-  div.answer-cont
-    p = answer.body
-    - if current_user && current_user.author_of?(answer)
-      p= link_to 'Delete answer', answer_path(answer), method: :delete, class: "btn btn-danger"
-  hr
 
+.answers
+  = render 'answers'
+
+.row
+  = form_for [@question, @answer], remote: true do |f|
+    .col-md-1
+      = f.label :body, "Your Answer"
+    .col-md-11
+      = f.text_area :body
+    div
+      = f.submit 'Create answer', class: "btn btn-success"
+
+hr
 -if current_user && current_user.author_of?(@question)
   p= link_to 'Delete question', question_path(@question), method: :delete, class: "btn btn-danger"
-p= link_to 'Create answer', new_question_answer_path(@question), class: "btn btn-success"

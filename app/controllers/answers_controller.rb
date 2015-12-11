@@ -2,20 +2,10 @@ class AnswersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_question, only: [:new, :create]
 
-
-  def new
-    @answer = @question.answers.new
-  end
-
   def create
     @answer = @question.answers.create(answer_params)
     @answer.user = current_user
-
-    if @answer.save
-      redirect_to @question
-    else
-      render :new
-    end
+    @answer.save
   end
 
   def destroy
@@ -26,8 +16,8 @@ class AnswersController < ApplicationController
     else
       @notice = "You are not author"
     end
-
     redirect_to @answer.question, notice: @notice
+
 
 
   end
@@ -39,7 +29,7 @@ class AnswersController < ApplicationController
   end
 
   def answer_params
-   params.require(:answer).permit(:body)
+   params.require(:answer).permit(:body, :question_id)
   end
 
 end

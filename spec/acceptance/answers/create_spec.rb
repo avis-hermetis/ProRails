@@ -8,7 +8,7 @@ feature 'User creates answer', %q{
   given!(:question) { create(:question) }
   given(:new_answer) { build(:answer) }
 
-  scenario 'Authenticated user create question.' do
+  scenario 'Authenticated user create answer.', js: true do
     sign_in user
 
     expect(page).to have_content 'Signed in successfully.'
@@ -18,17 +18,16 @@ feature 'User creates answer', %q{
 
     expect(current_path).to eq question_path(question)
 
-    click_on 'Create answer'
 
-    fill_in 'Body', with: new_answer.body
-    click_on 'Create'
+    fill_in 'Your Answer', with: new_answer.body
+    click_on 'Create answer'
 
     expect(current_path).to eq question_path(question)
 
     expect(page).to have_content new_answer.body
   end
 
-  scenario 'Non authenticated user try to create answer' do
+  scenario 'Non authenticated user try to create answer',  js: true do
     visit questions_path
     click_on question.title
 
