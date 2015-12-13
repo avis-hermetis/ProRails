@@ -1,8 +1,7 @@
-h4 Answers (#{@question.answers.count}):
-hr
+h4
 - @question.answers.each do |answer|
   div.answer-cont
   p= answer.body
-  -if current_user && current_user.author_of?(answer)
+  - if current_user && current_user.author_of?(answer)
     p= link_to 'Delete answer', answer_path(answer), method: :delete
   hr

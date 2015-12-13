@@ -1,0 +1,6 @@
+div.answer-cont
+  p= @question.answers.last.body
+  -if current_user && current_user.author_of?(@question.answers.last)
+    p= link_to 'Delete answer', answer_path(@question.answers.last), method: :delete
+p= link_to "Back to #{@question.title}", question_path(@question)
+hr
