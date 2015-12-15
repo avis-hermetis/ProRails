@@ -1,0 +1,8 @@
+h4
+= @question.answers.last.body
+
+-if current_user
+  p= link_to 'Delete answer', answer_path(@answer), method: :delete
+hr
+p= link_to 'back', question_path(@question)
+hr
