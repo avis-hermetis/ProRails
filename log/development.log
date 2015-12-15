@@ -24974,3 +24974,2096 @@ Processing by QuestionsController#show as HTML
   Rendered questions/show.html.slim within layouts/application (3.0ms)
   Rendered layouts/_header.html.slim (0.2ms)
 Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:43:36 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.3ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:43:38 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  Rendered questions/show.html.slim within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    3: 
+    4: = @question.body
+    5: hr
+    6: = render @answers
+    7: .answer
+    8: 
+    9: -if current_user
+  app/views/questions/show.html.slim:6:in `_app_views_questions_show_html_slim___899463952165008928_69811062870060'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:43:38 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered questions/show.html.slim within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    3: 
+    4: = @question.body
+    5: hr
+    6: = render @answers
+    7: .answer
+    8: 
+    9: -if current_user
+  app/views/questions/show.html.slim:6:in `_app_views_questions_show_html_slim___899463952165008928_69811068461460'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:44:05 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (7.5ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:44:12 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"wrwr"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "wrwr"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:44:12.349610"], ["updated_at", "2015-12-15 09:44:12.349610"]]
+  [1m[36m (18.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.6ms)
+  Rendered answers/create.js.erb (4.8ms)
+Completed 200 OK in 42ms (Views: 11.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:44:14 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (3.1ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:44:16 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.2ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:44:17 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (2.8ms)
+  Rendered layouts/_header.html.slim (0.3ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:44:20 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"war"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "war"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:44:20.036346"], ["updated_at", "2015-12-15 09:44:20.036346"]]
+  [1m[36m (23.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.6ms)
+  Rendered answers/create.js.erb (4.1ms)
+Completed 200 OK in 44ms (Views: 7.6ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:45:30 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.5ms)
+Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:45:31 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered answers/_answer.html.slim (10.5ms)
+  Rendered questions/show.html.slim within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"answers", :id=>nil} missing required keys: [:id]):
+    2: = @question.answers.last.body
+    3: 
+    4: -if current_user
+    5:   p= link_to 'Delete answer', answer_path(@answer), method: :delete
+    6: hr
+    7: p= link_to 'back', question_path(@question)
+    8: hr
+  app/views/answers/_answer.html.slim:5:in `_app_views_answers__answer_html_slim___473659316477693060_69811063702140'
+  app/views/questions/show.html.slim:6:in `_app_views_questions_show_html_slim___899463952165008928_69810968950060'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.3ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:45:31 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered answers/_answer.html.slim (7.5ms)
+  Rendered questions/show.html.slim within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"answers", :id=>nil} missing required keys: [:id]):
+    2: = @question.answers.last.body
+    3: 
+    4: -if current_user
+    5:   p= link_to 'Delete answer', answer_path(@answer), method: :delete
+    6: hr
+    7: p= link_to 'back', question_path(@question)
+    8: hr
+  app/views/answers/_answer.html.slim:5:in `_app_views_answers__answer_html_slim___473659316477693060_41272160'
+  app/views/questions/show.html.slim:6:in `_app_views_questions_show_html_slim___899463952165008928_42323060'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.1ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:46:14 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (1.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.3ms)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:46:15 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered answers/_answer.html.slim (12.4ms)
+  Rendered questions/show.html.slim within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"answers", :id=>nil} missing required keys: [:id]):
+    2: = @question.answers.last.body
+    3: 
+    4: -if current_user
+    5:   p= link_to 'Delete answer', answer_path(answer), method: :delete
+    6: hr
+    7: p= link_to 'back', question_path(@question)
+    8: hr
+  app/views/answers/_answer.html.slim:5:in `_app_views_answers__answer_html_slim___473659316477693060_69811057156600'
+  app/views/questions/show.html.slim:6:in `_app_views_questions_show_html_slim___899463952165008928_69810968950060'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:46:16 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered answers/_answer.html.slim (10.1ms)
+  Rendered questions/show.html.slim within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"answers", :id=>nil} missing required keys: [:id]):
+    2: = @question.answers.last.body
+    3: 
+    4: -if current_user
+    5:   p= link_to 'Delete answer', answer_path(answer), method: :delete
+    6: hr
+    7: p= link_to 'back', question_path(@question)
+    8: hr
+  app/views/answers/_answer.html.slim:5:in `_app_views_answers__answer_html_slim___473659316477693060_69811006510700'
+  app/views/questions/show.html.slim:6:in `_app_views_questions_show_html_slim___899463952165008928_42323060'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:46:29 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (3.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (2.4ms)
+Completed 200 OK in 132ms (Views: 129.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:12 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.6ms)
+  Rendered questions/show.html.slim within layouts/application (16.5ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 93ms (Views: 89.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:48:16 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"12"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "12"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:48:16.529894"], ["updated_at", "2015-12-15 09:48:16.529894"]]
+  [1m[35m (13.3ms)[0m  COMMIT
+  Rendered answers/create.js.erb (4.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 15.6ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answer').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811068584320'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:48:18 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"12"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "12"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:48:18.104812"], ["updated_at", "2015-12-15 09:48:18.104812"]]
+  [1m[36m (22.9ms)[0m  [1mCOMMIT[0m
+  Rendered answers/create.js.erb (4.3ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 25.0ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answer').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811068584320'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:48:21 +1000
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.slim within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.3ms)
+Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:22 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.2ms)
+  Rendered questions/show.html.slim within layouts/application (8.4ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/answers/303" for 127.0.0.1 at 2015-12-15 19:48:26 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1rMe94luATLAVD0Zp0UmSqbbIboLdxohzKiuuqAAfcQ9J8fL/bIvVyS+SzYn3qBBusPBDBDOBw2cpvxIMusPkQ==", "id"=>"303"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 303]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 303]]
+  [1m[36m (24.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 32ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:26 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.9ms)
+  Rendered questions/show.html.slim within layouts/application (9.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:48:34 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"noo"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "noo"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:48:34.825309"], ["updated_at", "2015-12-15 09:48:34.825309"]]
+  [1m[35m (20.4ms)[0m  COMMIT
+  Rendered answers/create.js.erb (3.7ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 22.6ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answer').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811068584320'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.1ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:48:37 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"noo"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "noo"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:48:37.241721"], ["updated_at", "2015-12-15 09:48:37.241721"]]
+  [1m[36m (23.8ms)[0m  [1mCOMMIT[0m
+  Rendered answers/create.js.erb (5.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 26.0ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answer').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811068584320'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.0ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:48:40 +1000
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.slim within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.3ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:41 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.4ms)
+  Rendered questions/show.html.slim within layouts/application (7.5ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/answers/305" for 127.0.0.1 at 2015-12-15 19:48:46 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BMO4Dn/4bYg070jaKrw+hcNAs8LcEjjLyyyRs9NIRbDvV2EyCyRD7dAFPvWqJ7iO31hTdMerJeebIsNBQaM35Q==", "id"=>"305"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 305]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 305]]
+  [1m[36m (31.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 41ms (ActiveRecord: 33.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:46 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.3ms)
+  Rendered questions/show.html.slim within layouts/application (5.9ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/answers/304" for 127.0.0.1 at 2015-12-15 19:48:50 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"thUbj+uZ/2xSGu44ydDG7y9IJxW1v/ImHvu1znHz7cldgcKzn0XRCbbwmBdJS0DkM1DHo64G7wpO9ec84xifnA==", "id"=>"304"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 304]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 304]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 13ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:50 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.9ms)
+  Rendered questions/show.html.slim within layouts/application (5.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/answers/302" for 127.0.0.1 at 2015-12-15 19:48:53 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"twnPNqe+Bjh1JQqAImbo3NqW0tyBlxPXvwvE0h3jvZ5cnRYK02IoXZHPfK+i/W7Xxo4yapouDvvvBZYgjwjPyw==", "id"=>"302"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 302]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 302]]
+  [1m[36m (17.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 24ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:53 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.5ms)
+  Rendered questions/show.html.slim within layouts/application (4.3ms)
+  Rendered layouts/_header.html.slim (0.2ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:48:56 +1000
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.slim within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.8ms)
+Completed 200 OK in 106ms (Views: 104.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:48:58 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.6ms)
+  Rendered questions/show.html.slim within layouts/application (5.4ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:49:06 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.6ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:49:07 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.4ms)
+  Rendered questions/show.html.slim within layouts/application (3.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:49:31 +1000
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.slim within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.4ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:49:32 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (8.6ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 86ms (Views: 83.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:49:36 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"dd"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "dd"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:49:36.123472"], ["updated_at", "2015-12-15 09:49:36.123472"]]
+  [1m[35m (13.5ms)[0m  COMMIT
+  Rendered answers/create.js.erb (5.2ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 15.6ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answers').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811002944380'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.4ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:50:00 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"dd"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "dd"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:50:00.751838"], ["updated_at", "2015-12-15 09:50:00.751838"]]
+  [1m[36m (15.4ms)[0m  [1mCOMMIT[0m
+  Rendered answers/create.js.erb (5.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 17.6ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answer').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811063119200'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.7ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:50:02 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"dd"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "dd"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:50:02.161634"], ["updated_at", "2015-12-15 09:50:02.161634"]]
+  [1m[35m (26.1ms)[0m  COMMIT
+  Rendered answers/create.js.erb (7.4ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 29.1ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: $('.answer').html('<%= j render @answers %>');
+    2: $('#answer_body').val('');
+  app/views/answers/create.js.erb:1:in `_app_views_answers_create_js_erb___2979264118915018833_69811063119200'
+
+
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (10.9ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/rubyman/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:50:09 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"dd"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "dd"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:50:09.149421"], ["updated_at", "2015-12-15 09:50:09.149421"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (6.3ms)
+  Rendered answers/create.js.erb (9.8ms)
+Completed 200 OK in 43ms (Views: 14.7ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 19:50:10 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.3ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:50:11 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.0ms)
+  Rendered questions/show.html.slim within layouts/application (11.9ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/answers/309" for 127.0.0.1 at 2015-12-15 19:50:15 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SCrv1nAUMsn+AuV/oJE7TPG3l7IUmsgvbKDYiDoAr3WjvjbqBMgcrBrok1AgCr1H7a93BA8j1QM8rop6qOvdIA==", "id"=>"309"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 309]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 309]]
+  [1m[35m (18.4ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 25ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:50:15 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.2ms)
+  Rendered questions/show.html.slim within layouts/application (9.5ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/answers/308" for 127.0.0.1 at 2015-12-15 19:50:18 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8/9COkxAmEYe0HQ0g5loLoCKJbe2tMXR9Pfj7W7i2zQYa5sGOJy2I/o6AhsDAu4lnJLFAa0N2P2k+bEf/AmpYQ==", "id"=>"308"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 308]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 308]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 15ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:50:18 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.9ms)
+  Rendered questions/show.html.slim within layouts/application (4.1ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 19:50:24 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"no"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "no"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 09:50:24.558786"], ["updated_at", "2015-12-15 09:50:24.558786"]]
+  [1m[35m (77.3ms)[0m  COMMIT
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1[0m  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (2.0ms)
+  Rendered answers/create.js.erb (5.7ms)
+Completed 200 OK in 100ms (Views: 11.1ms | ActiveRecord: 79.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 19:50:26 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.7ms)
+  Rendered questions/show.html.slim within layouts/application (8.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:30:22 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.2ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:30:23 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (8.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:30:26 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"aefr"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "aefr"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:30:26.848656"], ["updated_at", "2015-12-15 10:30:26.848656"]]
+  [1m[36m (253.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.7ms)
+  Rendered answers/create.js.erb (4.5ms)
+Completed 200 OK in 273ms (Views: 7.9ms | ActiveRecord: 256.3ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:30:30 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"asf"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "asf"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:30:30.265014"], ["updated_at", "2015-12-15 10:30:30.265014"]]
+  [1m[36m (51.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (3.3ms)
+  Rendered answers/create.js.erb (9.1ms)
+Completed 200 OK in 81ms (Views: 15.4ms | ActiveRecord: 54.2ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:30:35 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (4.0ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:30:37 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (2.0ms)
+Completed 200 OK in 114ms (Views: 112.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:30:38 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (2.8ms)
+  Rendered layouts/_header.html.slim (0.3ms)
+Completed 200 OK in 113ms (Views: 109.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:30:43 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.4ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:30:45 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (2.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:32:55 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.4ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:32:56 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (3.6ms)
+  Rendered layouts/_header.html.slim (0.3ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:32:58 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"asf"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "asf"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:32:58.965718"], ["updated_at", "2015-12-15 10:32:58.965718"]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (2.2ms)
+  Rendered answers/create.js.erb (7.2ms)
+Completed 200 OK in 36ms (Views: 13.8ms | ActiveRecord: 11.6ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:33:02 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"sff"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "sff"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:33:02.248033"], ["updated_at", "2015-12-15 10:33:02.248033"]]
+  [1m[36m (7.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.8ms)
+  Rendered answers/create.js.erb (5.7ms)
+Completed 200 OK in 30ms (Views: 12.2ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:33:04 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"sff"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "sff"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:33:04.484750"], ["updated_at", "2015-12-15 10:33:04.484750"]]
+  [1m[36m (14.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.4ms)
+  Rendered answers/create.js.erb (3.9ms)
+Completed 200 OK in 35ms (Views: 7.7ms | ActiveRecord: 16.9ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:07 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"фыа"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "фыа"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:07.176875"], ["updated_at", "2015-12-15 10:36:07.176875"]]
+  [1m[36m (22.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.4ms)
+  Rendered answers/create.js.erb (4.2ms)
+Completed 200 OK in 38ms (Views: 8.0ms | ActiveRecord: 23.8ms)
+
+
+Started DELETE "/answers/316" for 127.0.0.1 at 2015-12-15 20:36:09 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9dfZzzKS2AzIf5CRSZaztwKtydeuJTF1Edzo+q/AbaUeQwDzRk72aSyV5r7JDTW8HrUpYbWcLFlB0roIPSsf8A==", "id"=>"316"}
+  [1m[36mAnswer Load (0.8ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 316]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 316]]
+  [1m[36m (9.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 19ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:09 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (11.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:36:12 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (3.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (2.0ms)
+Completed 200 OK in 94ms (Views: 91.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:14 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (3.9ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 107ms (Views: 103.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:15 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"ыа"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "ыа"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:15.912653"], ["updated_at", "2015-12-15 10:36:15.912653"]]
+  [1m[36m (12.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.5ms)
+  Rendered answers/create.js.erb (4.2ms)
+Completed 200 OK in 35ms (Views: 9.2ms | ActiveRecord: 15.2ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:19 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"ыа"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "ыа"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:19.550442"], ["updated_at", "2015-12-15 10:36:19.550442"]]
+  [1m[36m (17.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.7ms)
+  Rendered answers/create.js.erb (4.7ms)
+Completed 200 OK in 40ms (Views: 9.4ms | ActiveRecord: 20.4ms)
+
+
+Started DELETE "/answers/318" for 127.0.0.1 at 2015-12-15 20:36:20 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mjnq5Axl1FTf0vTQ0anvnBFLi9gf6GxM3oQ52QfkLYrZrTPYeLn6MTs4gv9RMmmXDVNrbgRRcWCOimsrlQ9f3w==", "id"=>"318"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 318]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 318]]
+  [1m[36m (13.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 21ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:20 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (2.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:36:23 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.2ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:25 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (2.3ms)
+  Rendered layouts/_header.html.slim (0.2ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:28 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"аыа"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "аыа"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:28.080215"], ["updated_at", "2015-12-15 10:36:28.080215"]]
+  [1m[36m (18.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.5ms)
+  Rendered answers/create.js.erb (4.1ms)
+Completed 200 OK in 36ms (Views: 7.8ms | ActiveRecord: 20.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:31 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"2"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "2"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:31.325781"], ["updated_at", "2015-12-15 10:36:31.325781"]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.5ms)
+  Rendered answers/create.js.erb (4.4ms)
+Completed 200 OK in 29ms (Views: 8.6ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:32 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (2.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:36:34 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.7ms)
+Completed 200 OK in 114ms (Views: 111.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:35 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (3.0ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 106ms (Views: 102.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:36:37 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.2ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:36:39 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (4.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 87ms (Views: 83.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:48 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"фцак"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "фцак"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:48.378622"], ["updated_at", "2015-12-15 10:36:48.378622"]]
+  [1m[36m (14.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.5ms)
+  Rendered answers/create.js.erb (3.9ms)
+Completed 200 OK in 33ms (Views: 7.6ms | ActiveRecord: 16.5ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:52 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"фцкац"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "фцкац"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:52.135937"], ["updated_at", "2015-12-15 10:36:52.135937"]]
+  [1m[36m (21.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.5ms)
+  Rendered answers/create.js.erb (4.6ms)
+Completed 200 OK in 43ms (Views: 9.1ms | ActiveRecord: 23.4ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:36:57 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"фцка"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "фцка"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:36:57.435720"], ["updated_at", "2015-12-15 10:36:57.435720"]]
+  [1m[36m (49.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (2.2ms)
+  Rendered answers/create.js.erb (6.5ms)
+Completed 200 OK in 67ms (Views: 10.3ms | ActiveRecord: 51.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:37:02 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.4ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:03 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/show.html.slim within layouts/application (3.0ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 78ms (Views: 74.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:37:28 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"йфцйу"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "йфцйу"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:37:28.462469"], ["updated_at", "2015-12-15 10:37:28.462469"]]
+  [1m[36m (25.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (2.0ms)
+  Rendered answers/create.js.erb (4.5ms)
+Completed 200 OK in 48ms (Views: 10.8ms | ActiveRecord: 27.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:37:31 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"йуйу"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "йуйу"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:37:31.119979"], ["updated_at", "2015-12-15 10:37:31.119979"]]
+  [1m[36m (20.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (2.0ms)
+  Rendered answers/create.js.erb (6.0ms)
+Completed 200 OK in 44ms (Views: 11.3ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:35 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.6ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (6.8ms)
+  Rendered questions/show.html.slim within layouts/application (18.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/answers/312" for 127.0.0.1 at 2015-12-15 20:37:40 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QgYqKX32dcDVIaj7z51IurLtGB1LiMSetE2AMqV+blqpkvMVCSpbpTHL3tRPBs6xrvX4q1Ax2bLkQ9LAN5UcDw==", "id"=>"312"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 312]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 312]]
+  [1m[35m (17.3ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 24ms (ActiveRecord: 18.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:40 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.6ms)
+  Rendered questions/show.html.slim within layouts/application (12.6ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/answers/310" for 127.0.0.1 at 2015-12-15 20:37:43 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Nwpy5sjMicPeXhNl8KIJznX1YWuiEj5jk2f6uu/lGHTcnqvavBCnpjq0ZUpwOY/Fae2B3bmrI0/DaahIfQ5qIQ==", "id"=>"310"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 310]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 310]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 16ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:43 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.4ms)
+  Rendered questions/show.html.slim within layouts/application (5.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/answers/301" for 127.0.0.1 at 2015-12-15 20:37:45 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uY48Bovnyf4JOsolUbfu5GDf0zGgSnT2p7zWu8NE/1VSGuU6/zvnm+3QvArRLGjvfMczh7vzadr3soRJUa+NAA==", "id"=>"301"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 301]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 301]]
+  [1m[35m (10.8ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 15ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:45 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.8ms)
+  Rendered questions/show.html.slim within layouts/application (6.2ms)
+  Rendered layouts/_header.html.slim (0.2ms)
+Completed 200 OK in 84ms (Views: 81.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/answers/315" for 127.0.0.1 at 2015-12-15 20:37:47 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"chZR2SwwGIr67rgwurtz/Q2R+gj3HXC5ROkE5PwH8RaZgojlWOw27x4Ezh86IPX2EYkavuykbZUU51YWbuyDQw==", "id"=>"315"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 315]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 315]]
+  [1m[36m (14.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 21ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:47 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.6ms)
+  Rendered questions/show.html.slim within layouts/application (7.1ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 81ms (Views: 78.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/answers/297" for 127.0.0.1 at 2015-12-15 20:37:50 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XQD/UIWn4WwcdaA/ynIx7UtE5sQNJDTbUjS8KICGzze2lCZs8XvPCfif1hBK6bfmV1wGchadKfcCOu7aEm29Yg==", "id"=>"297"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 297]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 297]]
+  [1m[35m (20.6ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 28ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:50 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.4ms)
+  Rendered questions/show.html.slim within layouts/application (5.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/answers/314" for 127.0.0.1 at 2015-12-15 20:37:52 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VSt8LqtcRI7RnpX6tyUsQ+YOAqeZe/7vldYiyKN4AlG+v6US34Bq6zV049U3vqpI+hbiEYLC48PF2HA6MZNwBA==", "id"=>"314"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 314]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 314]]
+  [1m[36m (17.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 24ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:52 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.0ms)
+  Rendered questions/show.html.slim within layouts/application (5.5ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/answers/300" for 127.0.0.1 at 2015-12-15 20:37:54 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kZhlIg4tuLDzhhd2kc6lB6xrvDYEjm5E5MrC52W23t56DLweevGW1RdsYVkRVSMMsHNcgB83c2i0xJAV912siw==", "id"=>"300"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 300]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 300]]
+  [1m[35m (13.0ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 19ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:54 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.7ms)
+  Rendered questions/show.html.slim within layouts/application (6.1ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/answers/306" for 127.0.0.1 at 2015-12-15 20:37:55 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CQ7QLoIYidV4mSCSR8vh9ayNDssOY2ZYRUveMxPODpHimgkS9sSnsJxzVr3HUGf+sJXufRXae3QVRYzBgSV8xA==", "id"=>"306"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 306]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 306]]
+  [1m[36m (13.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 22ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:55 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.4ms)
+  Rendered questions/show.html.slim within layouts/application (5.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/answers/325" for 127.0.0.1 at 2015-12-15 20:37:59 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hmQBiAHvJ2I1ELuFjhkIiOGg+4w88ymEuIrIhiVzXgZt8Ni0dTMJB9H6zaoOgo6D/bgbOidKNKjohJp0t5gsUw==", "id"=>"325"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 325]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 325]]
+  [1m[35m (18.3ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 25ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:37:59 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.4ms)
+  Rendered questions/show.html.slim within layouts/application (4.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 84ms (Views: 82.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/answers/311" for 127.0.0.1 at 2015-12-15 20:38:00 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f5MjO6nYHcxVwmkOqEn696tKjjFk5fGyWe3AcYJYE2qUB/oH3QQzqbEoHyEo0nz8t1Juh39c7J4J45KDELNhPw==", "id"=>"311"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 311]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 311]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 15ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:00 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.8ms)
+  Rendered questions/show.html.slim within layouts/application (5.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/answers/313" for 127.0.0.1 at 2015-12-15 20:38:02 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NTkdtilml2YxAk2Uh54lJm1bn5TZnwt6Slb5hPUKY1/ercSKXbq5A9XoO7sHBaMtcUN/IsImFlYaWKt2Z+ERCg==", "id"=>"313"}
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 313]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 313]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 17ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:02 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.4ms)
+  Rendered questions/show.html.slim within layouts/application (6.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/answers/317" for 127.0.0.1 at 2015-12-15 20:38:02 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UUyulrOxMzX5Lsl04t3M+WcOvO3FT5P2kX9sJDpz/su62Heqx20dUB3Ev1tiRkryexZcW972jtrBcT7WqJiMng==", "id"=>"317"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 317]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 317]]
+  [1m[36m (395.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 405ms (ActiveRecord: 396.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:03 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (6.6ms)
+  Rendered questions/show.html.slim within layouts/application (9.5ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 94ms (Views: 89.4ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/answers/319" for 127.0.0.1 at 2015-12-15 20:38:04 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9qg7aNJipzLB0CXbxRqsfjGuJ1YkDzmxE2Xm3B3GKX0dPOJUpr6JVyU6U/RFgSp1LbbH4D+2JJ1Da7Qujy1bKA==", "id"=>"319"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 319]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 319]]
+  [1m[35m (21.6ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 28ms (ActiveRecord: 22.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:04 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.5ms)
+  Rendered questions/show.html.slim within layouts/application (4.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 76ms (Views: 74.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/answers/320" for 127.0.0.1 at 2015-12-15 20:38:05 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qyEeT6GKct15zva8X2w0Ma9UB8KvMcVkA3vE2hTtdoZAtcdz1VZcuJ0kgJPf97I6s0zndLSI2EhTdZYohgYE0w==", "id"=>"320"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 320]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 320]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 12ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:05 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.3ms)
+  Rendered questions/show.html.slim within layouts/application (4.6ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/answers/321" for 127.0.0.1 at 2015-12-15 20:38:05 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9I8ey6nGTvrJ0o3vpDM1Y6DqJHMvlhCMXFnMEyrHUM0fG8f33Rpgny04+8AkqLNovPLExTQvDaAMV57huCwimA==", "id"=>"321"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 321]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 321]]
+  [1m[35m (11.2ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 17ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:05 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.1ms)
+  Rendered questions/show.html.slim within layouts/application (4.8ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/answers/322" for 127.0.0.1 at 2015-12-15 20:38:06 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6YifhHuF5M76ENN0hSTQegYe16AdnUwFdn1NMQg3uV8CHEa4D1nKqx76pVsFv1ZxGgY3FgYkUSkmcx/DmtzLCg==", "id"=>"322"}
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 322]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 322]]
+  [1m[36m (17.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 26ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:06 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.2ms)
+  Rendered questions/show.html.slim within layouts/application (4.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/answers/323" for 127.0.0.1 at 2015-12-15 20:38:06 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dAN75ExyvOVuWrvIRY/xGKJeMlwA3q7bfYB3nQ/8skSfl6LYOK6SgIqwzefFFHcTvkbS6htns/ctjiVvnRfAEQ==", "id"=>"323"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 323]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 323]]
+  [1m[35m (13.4ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 20ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:07 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.1ms)
+  Rendered questions/show.html.slim within layouts/application (3.3ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:38:08 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (3.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.5ms)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:09 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.9ms)
+  Rendered questions/show.html.slim within layouts/application (8.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/answers/307" for 127.0.0.1 at 2015-12-15 20:38:10 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jdX3InABB41DrbSFMcjC3L8qyL3IYBCKCkffhIfoz8hmQS4eBN0p6KdHwqqxU0TXozIoC9PZDaZaSY12FQO9nQ==", "id"=>"307"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 307]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 307]]
+  [1m[35m (14.0ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 21ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:10 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.0ms)
+  Rendered questions/show.html.slim within layouts/application (3.1ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:38:12 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (3.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (2.2ms)
+Completed 200 OK in 144ms (Views: 140.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:13 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.0ms)
+  Rendered questions/show.html.slim within layouts/application (3.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:38:17 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"йуйу"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "йуйу"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:38:17.119455"], ["updated_at", "2015-12-15 10:38:17.119455"]]
+  [1m[35m (15.2ms)[0m  COMMIT
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1[0m  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.9ms)
+  Rendered answers/create.js.erb (5.5ms)
+Completed 200 OK in 39ms (Views: 10.4ms | ActiveRecord: 17.9ms)
+
+
+Started DELETE "/answers/326" for 127.0.0.1 at 2015-12-15 20:38:18 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tc32pmkCdobl7ZJUZoty/FtL7pZhe8mdKCIu6qxNRb9eWS+aHd5Y4wEH5HvmEPT3R1MOIHrC1LF4LHwYPqY36g==", "id"=>"326"}
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 326]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 326]]
+  [1m[35m (27.8ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 35ms (ActiveRecord: 29.7ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:18 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.4ms)
+  Rendered questions/show.html.slim within layouts/application (3.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:38:20 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"йуу"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["body", "йуу"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:38:20.641548"], ["updated_at", "2015-12-15 10:38:20.641548"]]
+  [1m[36m (92.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (2.6ms)
+  Rendered answers/create.js.erb (7.4ms)
+Completed 200 OK in 118ms (Views: 13.9ms | ActiveRecord: 94.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:21 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (18.0ms)
+  Rendered questions/show.html.slim within layouts/application (20.4ms)
+  Rendered layouts/_header.html.slim (0.3ms)
+Completed 200 OK in 92ms (Views: 88.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/answers/324" for 127.0.0.1 at 2015-12-15 20:38:24 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ypwM8hniWMwWzR1gb97Yv8V0YQ1MPwa0Hn+FnNle9n8hCNXObT52qfIna0/vRV602WyBu1eGG5hOcdduS7WEKg==", "id"=>"324"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 324]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 324]]
+  [1m[35m (21.3ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 29ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:24 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.2ms)
+  Rendered questions/show.html.slim within layouts/application (3.6ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:38:40 +1000
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.slim within layouts/application (2.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.4ms)
+Completed 200 OK in 95ms (Views: 92.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:41 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (5.3ms)
+  Rendered questions/show.html.slim within layouts/application (8.9ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 121ms (Views: 116.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:38:43 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"1"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "1"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:38:43.130621"], ["updated_at", "2015-12-15 10:38:43.130621"]]
+  [1m[35m (57.6ms)[0m  COMMIT
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1[0m  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (7.3ms)
+  Rendered answers/create.js.erb (11.9ms)
+Completed 200 OK in 88ms (Views: 19.3ms | ActiveRecord: 59.7ms)
+
+
+Started POST "/questions/25/answers" for 127.0.0.1 at 2015-12-15 20:38:45 +1000
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"body"=>"2"}, "commit"=>"Create answer", "question_id"=>"25"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "2"], ["question_id", 25], ["user_id", 1], ["created_at", "2015-12-15 10:38:45.259442"], ["updated_at", "2015-12-15 10:38:45.259442"]]
+  [1m[35m (17.4ms)[0m  COMMIT
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" DESC LIMIT 1[0m  [["question_id", 25]]
+  Rendered answers/_answer.html.slim (1.4ms)
+  Rendered answers/create.js.erb (3.8ms)
+Completed 200 OK in 42ms (Views: 7.7ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:38:46 +1000
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.slim within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.slim (1.5ms)
+Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:47 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (4.6ms)
+  Rendered questions/show.html.slim within layouts/application (7.5ms)
+  Rendered layouts/_header.html.slim (0.3ms)
+Completed 200 OK in 97ms (Views: 93.4ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/answers/327" for 127.0.0.1 at 2015-12-15 20:38:49 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D4L4dUpCgf9EgXQcH23uEstI+RVbqUzR69eYbbGIgpjkFiFJPp6vmqBrAjOf9mgZ11AZo0AQUf272cqfI2PwzQ==", "id"=>"327"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 327]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 327]]
+  [1m[36m (22.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 29ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:49 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.7ms)
+  Rendered questions/show.html.slim within layouts/application (4.2ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/answers/328" for 127.0.0.1 at 2015-12-15 20:38:50 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBclUMWd/jsaOKa2GxuK73zUd/olr+NX9t02FhMJOxfPg/xssUHQXv7S0JmbgAzkYMyXTD4W/num02TkgeJJQg==", "id"=>"328"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1  [["id", 328]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 328]]
+  [1m[35m (62.2ms)[0m  COMMIT
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 68ms (ActiveRecord: 63.6ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:51 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 25]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/_answers.html.slim (3.4ms)
+  Rendered questions/show.html.slim within layouts/application (5.4ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 84ms (Views: 80.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/answers/329" for 127.0.0.1 at 2015-12-15 20:38:52 +1000
+Processing by AnswersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SfNSJ4YS54+hRURt+9ZbATV45khUGkoXViYh7/cLNCiiZ4sb8s7J6kWvMkJ7Td0KKWAG/k+jVzsGKHMdZeBGfQ==", "id"=>"329"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = $1 LIMIT 1[0m  [["id", 329]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 329]]
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 25]]
+Redirected to http://localhost:3000/questions/25
+Completed 302 Found in 11ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/questions/25" for 127.0.0.1 at 2015-12-15 20:38:52 +1000
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 25]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/_answers.html.slim (2.6ms)
+  Rendered questions/show.html.slim within layouts/application (4.7ms)
+  Rendered layouts/_header.html.slim (0.1ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 1.0ms)
