@@ -2,6 +2,9 @@ class AnswersController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   before_action :set_question, only: [:new, :create]
 
+  def show
+
+  end
   def create
     @answer = @question.answers.create(answer_params)
     @answer.user = current_user
