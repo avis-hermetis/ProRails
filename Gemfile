@@ -13,7 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'devise'
-gem 'launchy'
+
+
 
 
 group :development, :test do
@@ -32,9 +33,13 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+
 end

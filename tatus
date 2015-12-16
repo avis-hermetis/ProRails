@@ -1,0 +1,167 @@
+[33mcommit 87619c12f5aea890736664b35d10a6a6a02a5ebf[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Dec 13 23:34:19 2015 +1000
+
+    failors fix, ajax renders one answer
+
+[33mcommit 97fb826229beb52ee0a36a484d4780d97caa984e[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Fri Dec 11 21:27:24 2015 +1000
+
+    add create answers with js
+
+[33mcommit 56b1a55d11db8081d48c3b019114806db2daaed7[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Wed Dec 9 23:45:00 2015 +1000
+
+    last fix: delete user_id in controllerspecs
+
+[33mcommit d81b61879a0abab2e10aee16c85eaf434745454d[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Tue Dec 8 03:09:42 2015 +1000
+
+    another try
+
+[33mcommit 9fa361062a209560fd5811004d3780c385b540d9[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Mon Dec 7 17:06:05 2015 +1000
+
+    add test for connection question and answer with current user
+
+[33mcommit 9f8a1d9f1564953c75682bc6c9560a30c36fce6d[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Dec 6 22:09:25 2015 +1000
+
+    return gitignore
+
+[33mcommit b750d2e5dd5b02972fdb486e0c9866663e614d36[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Dec 6 22:06:35 2015 +1000
+
+    in order to clean repository from  garbage
+
+[33mcommit 6715bcba7669119697275ed44f796beb9b069112[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Dec 6 17:02:12 2015 +1000
+
+    fixed
+
+[33mcommit 72c09aebaf3b6dd73fccf78ad7dda64134756e1f[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Thu Dec 3 22:07:20 2015 +1000
+
+    context non-author in spec, validate author in controller, change model spec
+
+[33mcommit eaaf9c5244b2c1fcca5dccc70e64e5ffb1c659fb[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Thu Nov 26 14:28:23 2015 +1000
+
+    log out test
+
+[33mcommit 3286198200a9c8734ff1beab6bd54fc55c2d5ba8[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Wed Nov 25 13:32:57 2015 +1000
+
+    screencast tasks done
+
+[33mcommit ac59ab5295412e7f1b162cf1ca28ca3284fe0be0[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Wed Nov 18 01:34:56 2015 +1000
+
+    done
+
+[33mcommit e549097369f26157774a1002da65f6362cc2efd8[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Mon Nov 16 20:54:16 2015 +1000
+
+    fix remarks
+
+[33mcommit b67bdf81b2afca5484ad2051c3bef9eb15050fd8[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 21:25:43 2015 +1000
+
+    lesson 4 done
+
+[33mcommit 52abe21b2b7c86016fe6edc1dde2a97363ec1d37[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 17:26:58 2015 +1000
+
+    question test is finished
+
+[33mcommit 86522cefa55c7cec8d06fd7c27f1bbdca36e9342[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 16:11:03 2015 +1000
+
+    add rspec for create and destroy
+
+[33mcommit ce4feed4fba1e21a699683d943e3a534628779c8[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 13:26:53 2015 +1000
+
+    test for new passed
+
+[33mcommit 7ebbf3564eeb68e204b44f7aaaa3035f903d5acd[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 13:25:11 2015 +1000
+
+    add rspec for action new
+
+[33mcommit 8ba523ff18f36697b41343a901e9bf2065db5e46[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 13:16:45 2015 +1000
+
+    show test passed
+
+[33mcommit e0c15f202bba241af0af4872cd25406d703c0a8f[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 13:13:56 2015 +1000
+
+    add rspec for show
+
+[33mcommit 69bc3a04a9b406313134b14ae36418f08403b5c5[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 13:00:07 2015 +1000
+
+    index test passed
+
+[33mcommit 0006cd187640b23e16dd0818a037dd30045c743d[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 12:56:23 2015 +1000
+
+    index rspec
+
+[33mcommit 24109e2f4f27a2f608ca3586665aaa2db7b5aae6[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Sun Nov 15 11:59:20 2015 +1000
+
+    adding controllers
+
+[33mcommit c11f8415b9a81c67627741d73f72af57c3d8f7c6[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Thu Nov 12 23:35:31 2015 +1000
+
+    add dependent: :destroy
+
+[33mcommit 18e5151027e4adb3300c8dae40adfbccb8c06880[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Wed Nov 11 23:11:42 2015 +1000
+
+    validation & association test
+
+[33mcommit 195dee5285f4f44715eaa93b9400fb87d831c9a2[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Wed Nov 11 13:36:45 2015 +1000
+
+    validation test done
+
+[33mcommit b63cf3e49c2469187f55c6fcfeab2885f3fc99e3[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Wed Nov 11 13:33:21 2015 +1000
+
+    test on validation
+
+[33mcommit 0dcae091867b8b8f73d1ef94e4653125f0e42be8[m
+Author: Michael <avis-hermetis@yandex.ru>
+Date:   Tue Nov 10 18:06:21 2015 +1000
+
+    Initial commit
