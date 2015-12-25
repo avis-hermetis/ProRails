@@ -1,4 +1,4 @@
-require 'rails_helper'
+require '/home/rubyman/Rails/qna/spec/acceptance/acceptance_helper'
 
 feature 'User destroys his answer', %q{
   As a authenticated user
@@ -9,7 +9,7 @@ feature 'User destroys his answer', %q{
   given!(:answer) {create(:answer, question: question)}
     scenario 'Authenticated user deletes his answer' do
       sign_in answer.user
-      visit question_path(question)
+      visit question_path question
 
       click_on 'Delete answer'
       expect(page).to_not have_content answer.body

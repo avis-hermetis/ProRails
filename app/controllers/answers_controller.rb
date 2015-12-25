@@ -2,11 +2,9 @@ class AnswersController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   before_action :set_question, only: [:new, :create]
 
-  def show
 
-  end
   def create
-    @answer = @question.answers.create(answer_params)
+    @answer = @question.answers.new(answer_params)
     @answer.user = current_user
     @answer.save
   end
@@ -20,11 +18,13 @@ class AnswersController < ApplicationController
       @notice = "You are not author"
     end
     redirect_to @answer.question, notice: @notice
-
-
-
   end
 
+  def update
+    @answer = Answer.find(params[:id])
+    @answer.update(answer_params)
+
+  end
   private
 
   def set_question

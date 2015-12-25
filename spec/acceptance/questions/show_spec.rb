@@ -1,4 +1,4 @@
-require 'rails_helper'
+require '/home/rubyman/Rails/qna/spec/acceptance/acceptance_helper'
 
 feature 'Show question and answers', %q{
   As a guest or a user

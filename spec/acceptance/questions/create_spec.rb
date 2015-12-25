@@ -1,4 +1,4 @@
-require 'rails_helper'
+require '/home/rubyman/Rails/qna/spec/acceptance/acceptance_helper'
 
 feature 'User creates question', %q{
   In order to get the answer from the community
