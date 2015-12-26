@@ -1,4 +1,4 @@
-require '/home/rubyman/Rails/qna/spec/acceptance/acceptance_helper'
+require 'acceptance/acceptance_helper'
 
 feature 'User destroys his answer', %q{
   As a authenticated user

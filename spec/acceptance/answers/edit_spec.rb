@@ -1,4 +1,4 @@
-require '/home/rubyman/Rails/qna/spec/acceptance/acceptance_helper'
+require 'acceptance/acceptance_helper'
 
 feature 'User edits answer', %q{
   In order to fix mistake
@@ -32,9 +32,9 @@ feature 'User edits answer', %q{
 
     scenario 'tries to edit his answer.', js: true do
       click_link 'Edit'
-      within '.answers' do
+      within "#answer_#{answer.id}" do
         fill_in 'Answer', with: 'edited answer'
-        click_on 'Save'
+        click_on 'Save' 
         expect(page).to_not have_content answer.body
         expect(page).to have_content 'edited answer'
         expect(page).to_not have_selector 'textarea'

@@ -1,4 +1,4 @@
-require '/home/rubyman/Rails/qna/spec/acceptance/acceptance_helper'
+require 'acceptance/acceptance_helper'
 
 feature 'Sign up', %q{
   In order to be able to ask question and creates answer

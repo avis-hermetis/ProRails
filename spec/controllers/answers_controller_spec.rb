@@ -24,6 +24,10 @@ RSpec.describe AnswersController, type: :controller do
         expect(assigns(:answer).user.id).to eq controller.current_user.id
       end
 
+      it 'assigns the requested question to @question' do
+        post :create, id: answer, question_id: question, answer: attributes_for(:answer), format: :js
+        expect(assigns(:question)).to eq question
+      end
 
     end
 
@@ -81,11 +85,6 @@ RSpec.describe AnswersController, type: :controller do
     it 'assigns the requested answer to @answer' do
       patch :update, id: answer, question_id: question, answer: attributes_for(:answer), format: :js
       expect(assigns(:answer)).to eq answer
-    end
-
-    it 'assigns the requested question to @question' do
-      patch :update, id: answer, question_id: question, answer: attributes_for(:answer), format: :js
-      expect(assigns(:question)).to eq question
     end
 
     it 'changes answer`s attributes`' do
