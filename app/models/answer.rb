@@ -6,9 +6,11 @@ class Answer < ActiveRecord::Base
 
   default_scope { order(best: :desc, created_at: :asc) }
 
-  def make_best # обернуть в транзакцию
-    self.question.answers.update_all(best: false)
-    self.update!(best: true)
+  def make_best
+    Answer.transaction do
+      self.question.answers.update_all(best: false)
+      self.update!(best: true)
+    end
   end
 
 end
