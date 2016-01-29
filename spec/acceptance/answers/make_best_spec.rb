@@ -12,9 +12,9 @@ feature 'User selects answer as best answer', %q{
   given!(:answer) {create(:answer, question: question)}
 
 
-  scenario 'The author of the question select the best answer for his question' do
+  scenario 'The author of the question select the best answer for his question', js: true do
     sign_in user
-    visit queston_path question
+    visit question_path question
     expect(page).to have_content 'Choose as Best'
 
     click_on 'Choose as Best'
@@ -23,14 +23,27 @@ feature 'User selects answer as best answer', %q{
 
   end
   scenario 'Authenticated user tries to select the best answer for other user`s question`' do
-    sign_in other
-    visit queston_path question
+    sign_in other_user
+    visit question_path question
     expect(page).to_not have_content 'Choose as Best'
 
   end
+
   scenario 'Not authenticated user tries to select  answer to be the best' do
-    visit queston_path question
+    visit question_path question
     expect(page).to_not have_content 'Choose as Best'
 
+  end
+
+  scenario 'The best answer is rendered first', js: true do
+  sign_in user
+  visit question_path question
+  click_on 'Choose as Best'
+
+  within "#answer_#{answer.id}"  do
+    click_on 'Choose as Best'
+  end
+
+   expect(page.find('.answer-cont:nth-of-type(1)')).to have_content 'Best answer'
   end
 end

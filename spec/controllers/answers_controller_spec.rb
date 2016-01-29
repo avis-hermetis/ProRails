@@ -101,23 +101,22 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'PATCH #make_best' do
-    let!(:answers_list) { create_list(:answer, 3, question: question, best: 'false') }
-    let!(:answer) { create(:answer, question: question, best: 'true') }
+    let!(:answer) { create(:answer, question: question, best: false) }
+
+    before  do
+      sign_in answer.question.user
+    end
+
+
 
     it 'assigns the requested answer to @answer' do
       patch :make_best, id: answer, question_id: question, format: :js
       expect(assigns(:answer)).to eq answer
     end
 
-    it 'sets all answer`s best attribute values to false`' do
-      patch :make_best, question_id: question, format: :js
-      expect( assigns(:answers) ).to match_array(answers)
-    end
-
     it 'sets answer`s best attribute value to true`' do
       patch :make_best, id: answer, question_id: question, format: :js
-      answer.reload
-      expect(answer.best).to eq 'true'
+      expect(answer.reload).to be_best
     end
 
     it 'render make best' do

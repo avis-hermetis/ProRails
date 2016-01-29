@@ -3,7 +3,7 @@ h4
   div.answer-cont id="answer_#{answer.id}"
     p.answer-body = answer.body
     - if answer.best?
-      p Best answer
+      p.best-answer Best answer
     - if current_user && current_user.author_of?(answer.question) && !answer.best?
       p = link_to 'Choose as Best', make_best_answer_path(answer), method: :patch, remote: true
     - if current_user && current_user.author_of?(answer)
