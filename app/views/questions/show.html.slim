@@ -3,18 +3,20 @@ hr
 
 = @question.body
 hr
-= render @question.answers
 .answers
+  = render @question.answers
+
 
 -if current_user
   .row
-   = form_for [@question, @answer], remote: true do |f|
+    = form_for [@question, @answer], remote: true do |f|
       .col-md-1
         = f.label :body, 'Your Answer'
+      .answer-errors
       .col-md-11
         = f.text_area :body
       div
-       = f.submit 'Create answer', class: "btn btn-success"
+        = f.submit 'Create answer', class: "btn btn-success"
 
 hr
 -if current_user && current_user.author_of?(@question)

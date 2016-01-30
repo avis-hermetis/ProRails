@@ -1,12 +1,13 @@
 FactoryGirl.define do
-  sequence :answerbody do |n|
+  sequence :body do |n|
     "AnswerText#{n}"
   end
 
   factory :answer do
-    body :answerbody
+    body
     question
     user
+    best false
   end
 
   factory :invalid_answer, class: 'Answer' do

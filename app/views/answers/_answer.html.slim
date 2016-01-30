@@ -1,7 +1,16 @@
 h4
 -if answer.persisted?
-  div.answer-cont
-  p= answer.body
-  - if current_user && current_user.author_of?(answer)
-    p= link_to 'Delete answer', answer_path(answer), method: :delete
+  div.answer-cont id="answer_#{answer.id}"
+    p.answer-body = answer.body
+    - if answer.best?
+      p.best-answer Best answer
+    - if current_user && current_user.author_of?(answer.question) && !answer.best?
+      p = link_to 'Choose as Best', make_best_answer_path(answer), method: :patch, remote: true
+    - if current_user && current_user.author_of?(answer)
+      p= link_to 'Delete answer', answer_path(answer), method: :delete
+      p= link_to 'Edit',answer_path(answer), id: "#{answer.id}", class: 'edit-answer-link', data: {answer_id: answer.id}
+      p= form_for [answer], remote: true, html: {id: "edit-answer-#{answer.id}"} do |f|
+        = f.label :body, 'Answer'
+        = f.text_area :body
+        = f.submit 'Save'
   hr

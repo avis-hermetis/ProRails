@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'acceptance/acceptance_helper'
 
 feature 'User creates answer', %q{
   As an authenticated user
@@ -14,9 +14,10 @@ feature 'User creates answer', %q{
     expect(page).to have_content 'Signed in successfully.'
 
     visit questions_path
+    expect(page).to have_content question.title
     click_on question.title
 
-    expect(current_path).to eq questions_path
+    expect(current_path).to eq question_path(question)
 
 
     fill_in 'Your Answer', with: new_answer.body
@@ -29,6 +30,8 @@ feature 'User creates answer', %q{
 
   scenario 'Non authenticated user try to create answer',  js: true do
     visit questions_path
+
+    expect(page).to have_content question.title
     click_on question.title
 
     expect(current_path).to eq question_path(question)
@@ -36,6 +39,16 @@ feature 'User creates answer', %q{
     expect(page).to_not have_content new_answer.body
     expect(page).to_not have_content 'Create answer'
     expect(page).to_not have_content 'Delete answer'
+  end
+
+  scenario 'User tries to create invalid answer', js: true do
+    sign_in user
+    visit question_path question
+
+    click_on 'Create answer'
+
+    expect(page).to have_content "Body can't be blank"
+
   end
 
 end
