@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :question_load, only:[:show, :destroy]
+  before_action :question_load, only:[:show, :destroy, :update]
 
   def index
     @questions = Question.all
@@ -32,6 +32,10 @@ class QuestionsController < ApplicationController
     else
       redirect_to @question, notice: 'You are not the author'
     end
+  end
+
+  def update
+    @question.update(question_params)
   end
 
 

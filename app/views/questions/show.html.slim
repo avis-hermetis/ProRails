@@ -1,7 +1,5 @@
-h2 = @question.title
-hr
-
-= @question.body
+.question
+  = render @question
 hr
 .answers
   = render @question.answers

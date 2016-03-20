@@ -8,7 +8,7 @@ h4
       p = link_to 'Choose as Best', make_best_answer_path(answer), method: :patch, remote: true
     - if current_user && current_user.author_of?(answer)
       p= link_to 'Delete answer', answer_path(answer), method: :delete
-      p= link_to 'Edit',answer_path(answer), id: "#{answer.id}", class: 'edit-answer-link', data: {answer_id: answer.id}
+      p= link_to 'Edit', '#edit', id: "#{answer.id}", class: 'edit-answer-link'
       p= form_for [answer], remote: true, html: {id: "edit-answer-#{answer.id}"} do |f|
         = f.label :body, 'Answer'
         = f.text_area :body
