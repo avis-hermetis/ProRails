@@ -3,6 +3,7 @@
 $('.question-errors').html('<%= j message %>');
 <% end %>
 <% else %>
+$('#question_<%= @question.id %> p.question-title').html('<%=  @question.title %>');
 $('#question_<%= @question.id %> p.question-body').html('<%=  @question.body %>');
 $('form#edit-question-<%= @question.id %>').hide();
 <% end %>

@@ -8,7 +8,9 @@ h4
       p= form_for question, remote: true, html: {id: "edit-question-#{question.id}"} do |f|
         = f.label :title, 'Title'
         = f.text_area :title
-        = f.label :body, 'Question'
+        br
+        = f.label :body, 'Body'
         = f.text_area :body
+        br
         = f.submit 'Save'
 hr
