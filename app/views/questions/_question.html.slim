@@ -1,13 +1,14 @@
 h4
 -if question.persisted?
-  div.question-cont id="question_#{question.id}"
+  div.question-count id="question_#{question.id}"
     p.question-title = question.title
     p.question-body = question.body
-    p= link_to 'Edit','#edit', id: "#{question.id}", class: 'edit-question-link'
-    p= form_for question, remote: true, html: {id: "edit-question-#{question.id}"} do |f|
-      = f.label :title, 'Title'
-      = f.text_area :title
-      = f.label :body, 'Text'
-      = f.text_area :body
-      = f.submit 'Save'
+    - if current_user && current_user.author_of?(question)
+      p= link_to 'Edit','#edit', id: "#{question.id}", class: 'edit-question-link'
+      p= form_for question, remote: true, html: {id: "edit-question-#{question.id}"} do |f|
+        = f.label :title, 'Title'
+        = f.text_area :title
+        = f.label :body, 'Question'
+        = f.text_area :body
+        = f.submit 'Save'
 hr

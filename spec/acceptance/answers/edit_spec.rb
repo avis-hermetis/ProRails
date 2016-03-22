@@ -11,16 +11,10 @@ feature 'User edits answer', %q{
   given!(:answer) { create(:answer, question: question, user: user) }
   given!(:other_user_answer) { create(:answer, question: question, user: other_user) }
 
-  describe 'Authenticated user' do
+  context 'Authenticated user' do
     before do
       sign_in user
       visit question_path question
-    end
-
-    scenario 'sees link to edit answer.', js: true do
-      within '.answers' do
-        expect(page).to have_link 'Edit'
-      end
     end
 
     scenario 'tries to edit other user`s` answer.', js: true do
@@ -44,9 +38,11 @@ feature 'User edits answer', %q{
 
   end
 
-     scenario 'Not authenticated user tries to edit answer.', js: true do
+  context 'Not authenticated user' do
+     scenario 'do not see the Edit link', js: true do
       visit question_path question
 
       expect(page).to_not have_link 'Edit'
      end
+  end
 end
