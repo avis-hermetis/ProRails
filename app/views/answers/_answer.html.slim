@@ -2,6 +2,11 @@ h4
 -if answer.persisted?
   div.answer-count id="answer_#{answer.id}"
     p.answer-body = answer.body
+    p Attachments:
+    p
+      ul
+        - answer.attachments.each do |a|
+          li = link_to a.file.identifier, a.file.url
     - if answer.best?
       p.best-answer Best answer
     - if current_user && current_user.author_of?(answer.question) && !answer.best?

@@ -3,6 +3,11 @@ h4
   div.question-count id="question_#{question.id}"
     p.question-title = question.title
     p.question-body = question.body
+    p Attachments:
+    p
+    ul
+      - question.attachments.each do |a|
+        li = link_to a.file.identifier, a.file.url
     - if current_user && current_user.author_of?(question)
       p= link_to 'Edit','#edit', id: "#{question.id}", class: 'edit-question-link'
       p= form_for question, remote: true, html: {id: "edit-question-#{question.id}"} do |f|
@@ -11,6 +16,9 @@ h4
         br
         = f.label :body, 'Body'
         = f.text_area :body
+        p= fields_for :attachments do |a|
+          = a.label :file
+          = a.file_field :file
         br
         = f.submit 'Save'
 hr
