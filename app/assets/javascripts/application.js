@@ -15,3 +15,4 @@
 //= require jquery.remotipart
 //= require bootstrap
 //= require_tree .
+//= require cocoon

@@ -4,5 +4,5 @@
 $ ->
   $('.edit-question-link').click (e) ->
     e.preventDefault();
-    question_id = $(this).attr("id")
-    $('form#edit-question-' + question_id).show()
+    question_id = $(this).attr("id");
+    $('form#edit-question-' + question_id).show();

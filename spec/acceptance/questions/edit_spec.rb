@@ -3,11 +3,11 @@ require 'acceptance/acceptance_helper'
 feature 'User edits question', %q{
   In order to fix mistake
   As an authenticated user
-  I want to be able to edit my answer
+  I want to be able to edit my question
 } do
   given!(:user) { create(:user) }
   given!(:other_user) { create(:user) }
-  given!(:question) { create(:question) }
+  given!(:question) { create(:question, user: user) }
   given!(:other_user_question) { create(:question, user: other_user) }
 
   context 'Authenticated user' do
@@ -26,17 +26,16 @@ feature 'User edits question', %q{
 
     scenario 'tries to edit his question.', js: true do
       visit question_path question
-      save_and_open_page
+      click_on 'Edit'
       within "#question_#{question.id}" do
 
-        click_on 'Edit'
         fill_in 'Title', with: 'edited title'
-        fill_in 'Question', with: 'edited body'
+        fill_in 'Body', with: 'edited body'
         click_on 'Save'
         expect(page).to_not have_content question.title
         expect(page).to_not have_content question.body
         expect(page).to have_content 'edited title'
-        expect(page).to have_content 'edited question'
+        expect(page).to have_content 'edited body'
         expect(page).to_not have_selector 'textarea'
       end
     end

@@ -3,8 +3,8 @@
 $('.question-errors').html('<%= j message %>');
 <% end %>
 <% else %>
-$('.question').html('<%= j render @question %>');
-//$('#question_<%= @question.id %> p.question-title').html('<%=  @question.title %>');
-//$('#question_<%= @question.id %> p.question-body').html('<%=  @question.body %>');
+$('#question_<%= @question.id %>').replaceWith('<%= j render @question %>');
+//$('#question_<%= @question.id %> p.question-title').text('<%=  @question.title %>');
+//$('#question_<%= @question.id %> p.question-body').text('<%=  @question.body %>');
 $('form#edit-question-<%= @question.id %>').hide();
 <% end %>

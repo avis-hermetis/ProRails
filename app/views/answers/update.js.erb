@@ -3,6 +3,8 @@
 $('.answer-errors').html('<%= j message %>');
 <% end %>
 <% else %>
-$('#answer_<%= @answer.id %> p.answer-body').html('<%=  @answer.body %>');
+$('#answer_<%= @answer.id %>').replaceWith('<%= j render @answer %>');
+//$('#answer_<%= @answer.id %> p.answer-body').text(<%= j  @answer.body %>');
+//$('#answer_<%= @answer.id %> p.answer-attachments').html('<%= j render  @answer.attachments %>');
 $('form#edit-answer-<%= @answer.id %>').hide();
 <% end %>

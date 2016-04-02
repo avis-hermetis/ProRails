@@ -1,11 +1,12 @@
-h4
+
 -if answer.persisted?
   div.answer-count id="answer_#{answer.id}"
     p.answer-body = answer.body
-    p Attachments:
+    p.answer-attachments Attachments:
     p
       ul
-        - answer.attachments.each do |a|
+        = render answer.attachments
+        //- answer.attachments.each do |a|
           li = link_to a.file.identifier, a.file.url
     - if answer.best?
       p.best-answer Best answer
@@ -14,8 +15,12 @@ h4
     - if current_user && current_user.author_of?(answer)
       p= link_to 'Delete answer', answer_path(answer), method: :delete
       p= link_to 'Edit', '#edit', id: "#{answer.id}", class: 'edit-answer-link'
-      p= form_for [answer], remote: true, html: {id: "edit-answer-#{answer.id}"} do |f|
+      p= form_for answer, remote: true, html: {id: "edit-answer-#{answer.id}"} do |f|
         = f.label :body, 'Answer'
         = f.text_area :body
+        = f.fields_for :attachments do |a|
+          //= render 'attachments/attachment_form', f: a
+        .links
+          = link_to_add_association 'add file', f, :attachments, partial: 'attachments/attachment_form'
         = f.submit 'Save'
   hr

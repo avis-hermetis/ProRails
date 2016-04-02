@@ -14,6 +14,7 @@ gem 'slim-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'remotipart'
+gem 'cocoon'
 
 
 

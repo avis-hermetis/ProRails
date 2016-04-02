@@ -5,9 +5,9 @@ h4
     p.question-body = question.body
     p Attachments:
     p
-    ul
-      - question.attachments.each do |a|
-        li = link_to a.file.identifier, a.file.url
+      ul
+        = render question.attachments
+
     - if current_user && current_user.author_of?(question)
       p= link_to 'Edit','#edit', id: "#{question.id}", class: 'edit-question-link'
       p= form_for question, remote: true, html: {id: "edit-question-#{question.id}"} do |f|
@@ -17,8 +17,8 @@ h4
         = f.label :body, 'Body'
         = f.text_area :body
         p= fields_for :attachments do |a|
-          = a.label :file
-          = a.file_field :file
+          .links
+            = link_to_add_association 'add file', f, :attachments, partial: 'attachments/attachment_form'
         br
         = f.submit 'Save'
 hr

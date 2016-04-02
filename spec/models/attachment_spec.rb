@@ -1,5 +1,5 @@
-require "acceptance/rails.spec"
+require "rails_helper"
 
-  describe Attachment do
-    it {should belong_to question}
-  end
+RSpec.describe Attachment, type: :model do
+    it {should belong_to :attachable}
+end

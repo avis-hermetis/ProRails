@@ -7,10 +7,10 @@ I would like to be able to attach file
 } do
 
   given(:user) {create(:user)}
-  given(:quetsion) {create(:question)}
+  given(:question) {create(:question)}
 
   background do
-    sugn_in user
+    sign_in user
     visit question_path question
   end
 
