@@ -3,7 +3,12 @@ class AttachmentsController < ApplicationController
 
   def destroy
     @attachment = Attachment.find(params[:id])
-    @attachment.destroy
+    if current_user && current_user.author_of?(@attachment.attachable)
+      @attachment.destroy
+      @notice = "File succesfully deleted!"
+    else
+      @notice = "You are not author"
+    end
 
   end
 
