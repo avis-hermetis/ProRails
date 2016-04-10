@@ -8,11 +8,41 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-log/*
+log/*.log
 log
 !/log/.keep
 tmp/*
-config/database.yml
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
 .idea
-public/uploads
-public/system
+
+/doc/examples
+config/database.yml
+
+# Ignore uploaded files
+/public/system
+/public/tmp
+/public/uploads
+/public/spec
+
+# Mac OS files
+.DS_Store
+
+# coverage files
+/coverage
+
+.powrc
+
+*.sublime-project
+*.sublime-workspace
+certs/
+
+.yardoc
+/log
+.powenv
+
+# Ignore application configuration
+/config/application.yml
+.zeus.sock

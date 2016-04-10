@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
     if current_user && current_user.author_of?(@answer)
       @answer.destroy
       @notice = "Answer succesfully deleted!"
-    else
+      else
       @notice = "You are not author"
     end
     redirect_to @answer.question, notice: @notice
@@ -41,7 +41,7 @@ class AnswersController < ApplicationController
   end
 
   def answer_params
-   params.require(:answer).permit(:body)
+   params.require(:answer).permit(:body, attachments_attributes: [:file, :_destroy, :id])
   end
 
 end

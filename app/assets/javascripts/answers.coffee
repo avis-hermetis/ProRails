@@ -5,4 +5,4 @@ $ ->
   $('.edit-answer-link').click (e) ->
     e.preventDefault();
     answer_id = $(this).attr("id")
-    $('form#edit-answer-' + answer_id).show()
+    $('form#edit-answer-' + answer_id).show();

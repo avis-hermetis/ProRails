@@ -44,6 +44,6 @@ feature 'User selects answer as best answer', %q{
     click_on 'Choose as Best'
   end
 
-   expect(page.find('.answer-cont:nth-of-type(1)')).to have_content 'Best answer'
+   expect(page.find('.answer-count:nth-of-type(1)')).to have_content 'Best answer'
   end
 end

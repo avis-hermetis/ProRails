@@ -1,7 +1,5 @@
-h2 = @question.title
-hr
-
-= @question.body
+.question
+  = render @question
 hr
 .answers
   = render @question.answers
@@ -9,14 +7,19 @@ hr
 
 -if current_user
   .row
-    = form_for [@question, @answer], remote: true do |f|
+    = form_for [@question, @answer], remote: true  do |f|
       .col-md-1
         = f.label :body, 'Your Answer'
       .answer-errors
       .col-md-11
         = f.text_area :body
+      p
+        = f.fields_for :attachments do |a|
+          = a.label :file
+          = a.file_field :file
       div
         = f.submit 'Create answer', class: "btn btn-success"
+
 
 hr
 -if current_user && current_user.author_of?(@question)
